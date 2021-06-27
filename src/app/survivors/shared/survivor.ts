@@ -3,7 +3,7 @@ export class Survivor {
   firstName!: string
   lastName!: string
   cpf!: string
-  description!: string
   age!: number
   infected!: boolean
+  flags!: number
 }

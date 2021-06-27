@@ -1,0 +1,42 @@
+
+<div class="container">
+  <h3>Documento</h3>
+  <section class="details" [ngClass]="{ 'infectedDocument': survivorValue.infected}">
+
+    <div class="name-cpf">
+      <div class="item">
+        <div>Nome</div>
+        <div>{{ survivorValue.firstName}} {{ survivorValue.lastName }}</div>
+      </div>
+
+      <div class="item">
+        <div>CPF</div>
+        <div>{{ survivorValue.cpf}}</div>
+      </div>
+    </div>
+
+    <div class="age-infected">
+      <div class="item">
+        <div>Idade</div>
+        <div>{{ survivorValue.age }} anos</div>
+      </div>
+
+      <div class="situation">
+        <div *ngIf="survivorValue.infected" class="infected">Infectado</div>
+        <div *ngIf="!survivorValue.infected" class="survivor">Sobrevivente</div>
+      </div>
+    </div>
+  </section>
+
+  <div class=reports>
+    <p>Reportado: {{ survivorValue.flags }} vezes</p>
+    <div class="buttons">
+      <button type="button" (click)='reportarSurvivor(survivorValue.id)'>Reportar</button>
+    </div>
+  </div>
+
+  <div>
+    <button class="btn" type="button" [routerLink]="['/survivor/edit/', survivorValue.id]">Alterar</button>
+    <button class="btn" id="back" type="button" [routerLink]="['']">Voltar</button>
+  </div>
+</div>

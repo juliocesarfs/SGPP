@@ -1,0 +1,97 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30%;
+}
+
+h3 {
+  color: white;
+}
+
+.details {
+  background-color: #161B22;
+  color: white;
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  width: 400px;
+  gap: 100px;
+  padding: 20px;
+  border-radius: 1px;
+  border: 1px solid #04D361;
+}
+
+.infectedDocument {
+  border-color: red;
+}
+
+.name-cpf {
+  margin-right: 0;
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-gap: 150px;
+}
+
+.age-infected {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  grid-gap: 150px;
+}
+
+.item div:first-child {
+  font-size: 15px;
+  color: grey;
+  padding-bottom: 5px;
+}
+
+.item div:last-child {
+  font-size: 18px;
+}
+
+.situation {
+  text-align: end;
+}
+
+.infected {
+  color: red;
+  font-weight: bolder;
+}
+
+.survivor {
+  color: #04D361;
+  font-weight: bolder;
+}
+
+.situation div {
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.reports {
+  margin-top: 20px;
+  color: white;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+.buttons button {
+  margin-left: 90px;
+  width: 80px;
+  background-color: #6B0000;
+  border-radius: 2px;
+  color: white;
+}
+
+
+.btn {
+  color: grey;
+  background-color: #2b3036;
+  margin-right: 20px;
+}
+
+#back {
+  background-color: #04D361;
+  color: black;
+}
+
