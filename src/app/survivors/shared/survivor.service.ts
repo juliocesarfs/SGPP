@@ -94,4 +94,13 @@ handleError(error: any) {
     )
   }
 
+  flagSurvivor(id: number): Observable<Survivor> {
+    return this.http.patch<Survivor>(this.URL_SURVIVOR_SERVICE+'/'+id+'/'+'flag', httpOptions)
+    .pipe(
+      tap( (survivor) => console.log('flagSurvivor', survivor)),
+      retry(1),
+      catchError(this.handleError)
+    )
+  }
+
 }

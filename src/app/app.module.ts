@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SurvivorsListComponent } from './survivors/survivors-list/survivors-list.component';
 import { SurvivorsFormComponent } from './survivors/survivors-form/survivors-form.component';
+import { SurvivorsDocumentComponent } from './survivors/survivors-document/survivors-document.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SurvivorsListComponent,
-    SurvivorsFormComponent
+    SurvivorsFormComponent,
+    SurvivorsDocumentComponent
   ],
   imports: [
     BrowserModule,
