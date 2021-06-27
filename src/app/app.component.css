@@ -1,0 +1,15 @@
+header {
+  background-color: #161B22;
+  width: 100%;
+  text-align: center;
+  padding: 50px;
+}
+
+header a {
+  position: relative;
+  background-color: #161B22;
+  font-size: 40px;
+  text-decoration: none;
+  color: white;
+}
+

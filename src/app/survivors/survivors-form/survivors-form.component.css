@@ -1,0 +1,33 @@
+* {
+  color: white;
+}
+
+input {
+  color: black;
+}
+
+.form {
+  border-top: 4px;
+  border-color: white;
+}
+.form-control-plaintext {
+  background-color: white;
+  width: 120px;
+  color: black;
+  border-radius: 4px;
+}
+
+.form-control {
+  width: 200px;
+}
+
+#idade {
+  width: 80px;
+  text-align: center;
+}
+
+#btn-save {
+  background-color: #04D361;
+  color: black;
+  margin-right: 20px;
+}

@@ -1,0 +1,34 @@
+<h2>{{ title }}</h2>
+
+<section id="form">
+  <form (ngSubmit)="salvarSurvivor()" #formTask="ngForm">
+    <div class="mb-3 row">
+      <label for="cpf" class="col-sm-2 col-form-label">CPF</label>
+      <div class="col-sm-10">
+        <input *ngIf="survivorValue.id" ng-pattern="onlyNumbers" readonly class="form-control-plaintext" name="staticCPF" [(ngModel)]='survivorValue.cpf'>
+        <input *ngIf="!survivorValue.id" ng-pattern="onlyNumbers" class="form-control-plaintext" name="staticCPF" [(ngModel)]='survivorValue.cpf'>
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="primeiroNome" class="col-sm-2 col-form-label">Primeiro Nome</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id ='firstName' name="primeirNome" [(ngModel)]='survivorValue.firstName'>
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="lastName" class="col-sm-2 col-form-label">Sobrenome</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id ='lastName' name="lastName" [(ngModel)]='survivorValue.lastName'>
+      </div>
+    </div>
+    <div class="mb-3 row">
+      <label for="idade" class="col-sm-2 col-form-label">Idade</label>
+      <div class="col-sm-10">
+        <input type="number" class="form-control" id ='idade' name="idade" [(ngModel)]='survivorValue.age'>
+      </div>
+    </div>
+    <button class="btn btn-primary" id="btn-save" type="submit" name="btnSalvar">Salvar</button>
+    <button class="btn btn-danger" type="button" (click)='removerSurvivor(survivorValue.id)'>Excluir</button>
+    <button class="btn" type="button" [routerLink]="['']">Cancelar</button>
+  </form>
+</section>

@@ -1,0 +1,31 @@
+.table {
+  color: white;
+  border-bottom: none;
+}
+
+h1 {
+  color: white;
+}
+
+tr {
+  border-color: #04D361;
+  align-items: baseline;
+}
+
+tbody tr {
+  cursor: pointer;
+}
+
+tbody tr:hover {
+  background-color: #161B22;
+  transition: 50ms;
+}
+
+
+.btn-see {
+  background-color: white;
+  width: 50px;
+  height: 35px;
+  border-radius: 4px;
+}
+

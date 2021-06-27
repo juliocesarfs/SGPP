@@ -1,0 +1,21 @@
+<h1>Sobreviventes</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#ID</th>
+      <th scope="col">Nome</th>
+      <th scope="col">CPF</th>
+      <th scope="col">Idade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr [routerLink]="[ '/survivor/', survivor.id]" *ngFor="let survivor of survivors">
+      <th scope="row">{{ survivor.id }}</th>
+      <td>{{ survivor.firstName }} {{ survivor.lastName }}</td>
+      <td>{{ survivor.cpf }}</td>
+      <td>{{ survivor.age }}</td>
+    </tr>
+  </tbody>
+</table>
+<hr/>
+<button class="btn btn-primary" type="button" [routerLink]="['/survivor/new']">Novo</button>
