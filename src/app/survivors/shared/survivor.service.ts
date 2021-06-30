@@ -41,7 +41,7 @@ handleError(error: any) {
     return this.http.get<Survivor[]>(this.URL_SURVIVOR_SERVICE).pipe(
       tap( (survivors) => console.log('leu Survivors:',survivors)),
       retry(1),
-      catchError(this.handleError )
+      catchError(this.handleError)
     );
   }
 

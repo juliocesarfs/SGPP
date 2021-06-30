@@ -46,6 +46,7 @@ h3 {
 
 .item div:last-child {
   font-size: 18px;
+  width: 150px;
 }
 
 .situation {
