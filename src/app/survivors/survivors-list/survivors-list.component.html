@@ -9,7 +9,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr [routerLink]="[ '/survivor/', survivor.id]" *ngFor="let survivor of survivors">
+    <tr [routerLink]="[ '/survivors/', survivor.id]" *ngFor="let survivor of survivors">
       <th scope="row">{{ survivor.id }}</th>
       <td>{{ survivor.firstName }} {{ survivor.lastName }}</td>
       <td>{{ survivor.cpf }}</td>
@@ -18,4 +18,4 @@
   </tbody>
 </table>
 <hr/>
-<button class="btn btn-primary" type="button" [routerLink]="['/survivor/new']">Novo</button>
+<button class="btn btn-primary" type="button" [routerLink]="['/survivors/new']">Novo</button>

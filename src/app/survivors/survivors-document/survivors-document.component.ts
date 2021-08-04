@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { Survivor } from '../shared/survivor';
 import { SurvivorService } from '../shared/survivor.service';
 
@@ -13,7 +13,6 @@ export class SurvivorsDocumentComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private router: Router,
     private survivorService: SurvivorService
   ) { }
 

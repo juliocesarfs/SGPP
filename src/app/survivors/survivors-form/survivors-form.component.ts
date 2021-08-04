@@ -34,7 +34,7 @@ export class SurvivorsFormComponent implements OnInit {
   salvarSurvivor(){
     if(window.confirm('Salvar dados?')){
       this.survivorService.salvarSurvivor(this.survivorValue).subscribe ( data => {
-        this.router.navigate([''])
+        this.router.navigate(['/survivors'])
       }, erro => {
           console.log('erro salvarSurvivor', erro);
           window.alert(erro);
@@ -47,7 +47,7 @@ export class SurvivorsFormComponent implements OnInit {
       this.survivorService.apagarSurvivor(id).subscribe( (dado) => {
         this.buscarDAdosSurvivors();
         window.alert('Survivor Removido!');
-        this.router.navigate([''])
+        this.router.navigate(['/survivors'])
       }, erro => {
         window.alert(erro);
       })
