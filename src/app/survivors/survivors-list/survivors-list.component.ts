@@ -16,7 +16,7 @@ export class SurvivorsListComponent implements OnInit {
   ngOnInit(): void {
     this.buscarDAdosSurvivors();
   }
-  
+
   buscarDAdosSurvivors() {
     this.survivorService.getSurvivors().subscribe(result => {
       this.survivors = result;

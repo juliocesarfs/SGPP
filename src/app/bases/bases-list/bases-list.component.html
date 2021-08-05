@@ -1,0 +1,13 @@
+<h1>Distritos</h1>
+<section>
+  <div class="base" *ngFor="let base of bases">
+    <div>{{ base.baseName}}</div>
+    <div class="survivors">
+      <div>{{ base.totalSurvivors }}</div>
+      <p>Sobreviventes</p>
+    </div>
+  </div>
+</section>
+<div class="button">
+  <button type="button" [routerLink]="['/districts/new']">Adicionar Distrito</button>
+</div>

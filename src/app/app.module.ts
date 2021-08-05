@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import { SurvivorsListComponent } from './survivors/survivors-list/survivors-list.component';
 import { SurvivorsFormComponent } from './survivors/survivors-form/survivors-form.component';
 import { SurvivorsDocumentComponent } from './survivors/survivors-document/survivors-document.component';
+import { BasesListComponent } from './bases/bases-list/bases-list.component';
+import { BasesFormComponent } from './bases/bases-form/bases-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SurvivorsListComponent,
     SurvivorsFormComponent,
-    SurvivorsDocumentComponent
+    SurvivorsDocumentComponent,
+    BasesListComponent,
+    BasesFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,4 +29,5 @@ import { SurvivorsDocumentComponent } from './survivors/survivors-document/survi
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
