@@ -1,7 +1,9 @@
+import { BaseService } from './../../bases/shared/base.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Survivor } from '../shared/survivor';
 import { SurvivorService } from '../shared/survivor.service';
+import { Base } from 'src/app/bases/shared/base';
 
 @Component({
   selector: 'app-survivor-form',
@@ -11,18 +13,24 @@ import { SurvivorService } from '../shared/survivor.service';
 export class SurvivorsFormComponent implements OnInit {
   survivorValue: Survivor = new Survivor();
   survivors: Survivor[] = []
+  bases: Base[] = []
   title: string = 'Novo Sobrevivente';
 
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
-    private survivorService: SurvivorService) { }
+    private survivorService: SurvivorService,
+    private baseService: BaseService) { }
 
   ngOnInit(): void {
     console.log('inicialização : survivor: ',this.survivorValue);
     const id = this.activatedRoute.snapshot.params['id'];
-    if(id){
+    this.baseService.getBases().subscribe(result => {
+      this.bases = result
+      console.log('Bases do servidor: ', this.bases)
+    })
+    if(id) {
       this.survivorService.getSurvivor(id).subscribe( (data: Survivor) =>{
         console.log('survivor get, ',data);
         this.survivorValue = data;
@@ -32,7 +40,7 @@ export class SurvivorsFormComponent implements OnInit {
   }
 
   salvarSurvivor(){
-    if(window.confirm('Salvar dados?')){
+    if(window.confirm('Salvar dados?')) {
       this.survivorService.salvarSurvivor(this.survivorValue).subscribe ( data => {
         this.router.navigate(['/survivors'])
       }, erro => {

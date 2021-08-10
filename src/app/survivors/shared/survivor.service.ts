@@ -67,7 +67,7 @@ handleError(error: any) {
   }
 
    // Alterar um novo Survivor -> HttpClient API Post()
-   alterarSurvivor(id:number, survivor: Survivor): Observable<Survivor> {
+   alterarSurvivor(id: number, survivor: Survivor): Observable<Survivor> {
     return this.http.patch<Survivor>(this.URL_SURVIVOR_SERVICE+'/'+id, JSON.stringify(survivor),httpOptions)
     .pipe(
       tap( (survivor) => console.log('alterarSurvivor',survivor)),
@@ -79,7 +79,7 @@ handleError(error: any) {
   salvarSurvivor(survivor: Survivor): Observable<Survivor>{
     if(survivor && survivor.id){
       return this.alterarSurvivor(survivor.id, survivor);
-    }else{
+    }else {
       return this.criarSurvivor(survivor);
     }
   }

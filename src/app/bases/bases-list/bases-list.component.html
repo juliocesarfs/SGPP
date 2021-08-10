@@ -1,9 +1,9 @@
 <h1>Distritos</h1>
 <section>
-  <div class="base" *ngFor="let base of bases">
+  <div class="base" *ngFor="let base of bases" (click)='routeToEdit(base.id)'>
     <div>{{ base.baseName}}</div>
     <div class="survivors">
-      <div>{{ base.totalSurvivors }}</div>
+      <div>389</div>
       <p>Sobreviventes</p>
     </div>
   </div>

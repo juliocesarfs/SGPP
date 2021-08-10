@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Base } from '../shared/base';
 import { BaseService } from '../shared/base.service';
@@ -10,7 +11,10 @@ import { BaseService } from '../shared/base.service';
 export class BasesListComponent implements OnInit {
   bases: Base[] = []
 
-  constructor(private baseService: BaseService) { }
+  constructor(
+    private baseService: BaseService,
+    private router: Router
+    ) { }
 
   ngOnInit(): void {
     this.searchDistrictData()
@@ -25,5 +29,9 @@ export class BasesListComponent implements OnInit {
         console.error(erro)
       }
     )
+  }
+
+  routeToEdit(id: number) {
+    this.router.navigate(['/districts/edit/'+id])
   }
 }

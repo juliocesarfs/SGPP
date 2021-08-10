@@ -9,7 +9,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr [routerLink]="[ '/survivors/', survivor.id]" *ngFor="let survivor of survivors">
+    <tr [routerLink]="[ '/survivors/', survivor.id ]" *ngFor="let survivor of survivors">
       <th scope="row">{{ survivor.id }}</th>
       <td>{{ survivor.firstName }} {{ survivor.lastName }}</td>
       <td>{{ survivor.cpf }}</td>

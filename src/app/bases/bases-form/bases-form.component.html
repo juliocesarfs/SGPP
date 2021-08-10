@@ -1,1 +1,14 @@
-<p>bases-form works!</p>
+<h1>{{ title }}</h1>
+<section class="form">
+  <form (ngSubmit)="saveBase()" #formTask="ngForm">
+    <div>Nome do distrito</div>
+    <div>
+      <input name="baseName" type="text" [(ngModel)]='baseValue.baseName'>
+    </div>
+    <div class="buttons">
+      <button class="save" type="submit">Salvar</button>
+      <button class="delete" type="button" (click)='removerBase(baseValue.id)'>Excluir</button>
+      <button class="back" [routerLink]="['/districts']">Voltar</button>
+    </div>
+  </form>
+</section>

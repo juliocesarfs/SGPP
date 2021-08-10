@@ -7,15 +7,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { BasesListComponent } from './bases/bases-list/bases-list.component';
 
 const routes: Routes = [
-  { path: '',                     component: BasesListComponent},
-  { path: 'survivors',            component: SurvivorsListComponent },
-  { path: 'survivors/new',        component: SurvivorsFormComponent },
-  { path: 'survivors/edit/:id',   component: SurvivorsFormComponent },
+  { path: 'districts',            component: BasesListComponent         },
+  { path: 'survivors',            component: SurvivorsListComponent     },
+  { path: 'survivors/new',        component: SurvivorsFormComponent     },
+  { path: 'survivors/edit/:id',   component: SurvivorsFormComponent     },
   { path: 'survivors/:id',        component: SurvivorsDocumentComponent },
-  { path: ':baseName/survivors',  component: SurvivorsListComponent },
 
   //bases
-  { path: 'districts/new', component: BasesFormComponent }
+  { path: 'districts/new',       component: BasesFormComponent          },
+  { path: 'districts/edit/:id',  component: BasesFormComponent          },
 ];
 
 @NgModule({
