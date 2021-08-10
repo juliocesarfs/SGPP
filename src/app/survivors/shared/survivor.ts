@@ -6,4 +6,5 @@ export class Survivor {
   age!: number
   infected!: boolean
   flags!: number
+  base!: string
 }
