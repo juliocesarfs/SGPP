@@ -1,13 +1,13 @@
 <h1>{{ title }}</h1>
 <section class="form">
-  <form (ngSubmit)="saveBase()" #formTask="ngForm">
+  <form (ngSubmit)="saveDistrict()" #formTask="ngForm">
     <div>Nome do distrito</div>
     <div>
-      <input name="baseName" type="text" [(ngModel)]='baseValue.baseName'>
+      <input name="districtName" type="text" [(ngModel)]='districtValue.districtName'>
     </div>
     <div class="buttons">
       <button class="save" type="submit">Salvar</button>
-      <button class="delete" type="button" (click)='removerBase(baseValue.id)'>Excluir</button>
+      <button class="delete" type="button" (click)='removerDistrict(districtValue.id)'>Excluir</button>
       <button class="back" [routerLink]="['/districts']">Voltar</button>
     </div>
   </form>

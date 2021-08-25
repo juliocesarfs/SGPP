@@ -1,9 +1,9 @@
-import { BaseService } from './../../bases/shared/base.service';
+import { DistrictService } from './../../districts/shared/district.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Survivor } from '../shared/survivor';
 import { SurvivorService } from '../shared/survivor.service';
-import { Base } from 'src/app/bases/shared/base';
+import { District } from 'src/app/districts/shared/district';
 
 @Component({
   selector: 'app-survivor-form',
@@ -13,7 +13,7 @@ import { Base } from 'src/app/bases/shared/base';
 export class SurvivorsFormComponent implements OnInit {
   survivorValue: Survivor = new Survivor();
   survivors: Survivor[] = []
-  bases: Base[] = []
+  districts: District[] = []
   title: string = 'Novo Sobrevivente';
 
 
@@ -21,14 +21,14 @@ export class SurvivorsFormComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private router: Router,
     private survivorService: SurvivorService,
-    private baseService: BaseService) { }
+    private districtService: DistrictService) { }
 
   ngOnInit(): void {
     console.log('inicialização : survivor: ',this.survivorValue);
     const id = this.activatedRoute.snapshot.params['id'];
-    this.baseService.getBases().subscribe(result => {
-      this.bases = result
-      console.log('Bases do servidor: ', this.bases)
+    this.districtService.getDistricts().subscribe(result => {
+      this.districts = result
+      console.log('Districts do servidor: ', this.districts)
     })
     if(id) {
       this.survivorService.getSurvivor(id).subscribe( (data: Survivor) =>{
