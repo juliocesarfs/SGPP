@@ -8,8 +8,8 @@ import { AppComponent } from './app.component';
 import { SurvivorsListComponent } from './survivors/survivors-list/survivors-list.component';
 import { SurvivorsFormComponent } from './survivors/survivors-form/survivors-form.component';
 import { SurvivorsDocumentComponent } from './survivors/survivors-document/survivors-document.component';
-import { BasesListComponent } from './bases/bases-list/bases-list.component';
-import { BasesFormComponent } from './bases/bases-form/bases-form.component';
+import { DistrictsListComponent } from './districts/districts-list/districts-list.component';
+import { DistrictsFormComponent } from './districts/districts-form/districts-form.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +17,8 @@ import { BasesFormComponent } from './bases/bases-form/bases-form.component';
     SurvivorsListComponent,
     SurvivorsFormComponent,
     SurvivorsDocumentComponent,
-    BasesListComponent,
-    BasesFormComponent,
+    DistrictsListComponent,
+    DistrictsFormComponent,
   ],
   imports: [
     BrowserModule,
